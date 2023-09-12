@@ -16,7 +16,6 @@ import torchvision
 def eval_model(model, dataset, use_gpu=False, show_plot=False):
     """Evaluate HAM10000. Assumes the data is split into binary/malignant labels, as this is 
     what our models are trained+evaluated on."""
-
     use_gpu = (use_gpu and torch.cuda.is_available())
     device = torch.device("cuda") if use_gpu else torch.device("cpu")
 
